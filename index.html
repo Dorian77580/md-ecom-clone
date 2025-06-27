@@ -4,20 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <!-- 🔑 Titre SEO -->
   <title>Création de site web en Seine-et-Marne | MD ECOM</title>
-
-  <!-- 📝 Meta Description -->
   <meta name="description" content="MD ECOM est une agence web en Seine-et-Marne (77) spécialisée dans la création de sites internet sur-mesure et le SEO local. Demandez un audit gratuit.">
 
-  <!-- 📱 Meta Open Graph pour partage réseaux sociaux -->
   <meta property="og:title" content="MD ECOM – Agence Web en Seine-et-Marne">
   <meta property="og:description" content="Agence web française spécialisée dans la création de sites et le référencement local. Basée à Marne-la-Vallée.">
   <meta property="og:url" content="https://tonpseudo.github.io">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://mdecom.fr/wp-content/uploads/2024/10/logo-md-ecom-1.svg">
 
-  <!-- 🔍 Meta pour Google -->
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://tonpseudo.github.io">
 
@@ -36,13 +31,22 @@
     }
 
     h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
+      font-size: 2.5rem;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    .typing {
+      display: inline-block;
+      border-right: 2px solid #FFCC00;
+      padding-left: 8px;
+      min-width: 270px; /* pour éviter les sauts au changement de texte */
     }
 
     p {
       font-size: 1.2rem;
       color: #cccccc;
+      margin-top: 30px;
     }
 
     .cta-button {
@@ -69,33 +73,12 @@
       font-size: 0.9rem;
       color: #999;
     }
-
-    .typing {
-      font-size: 2rem;
-      font-weight: bold;
-      border-right: 2px solid #FFCC00;
-      white-space: nowrap;
-      overflow: hidden;
-      width: 0;
-      animation: typing 4s steps(40, end) forwards, blink 0.8s step-end infinite;
-      margin-top: 20px;
-      display: inline-block;
-    }
-
-    @keyframes typing {
-      from { width: 0 }
-      to { width: 100% }
-    }
-
-    @keyframes blink {
-      50% { border-color: transparent }
-    }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>MD ECOM <span class="typing"></span></h1>
+    <h1>MD ECOM<span class="typing"></span></h1>
     <p>Création de sites web sur-mesure, SEO local et optimisation de votre présence en ligne</p>
     <a href="https://mdecom.fr/contact/" class="cta-button">Demander un audit gratuit</a>
   </header>
@@ -106,9 +89,9 @@
 
   <script>
     const phrases = [
-      "créateur de sites puissants",
-      "expert en SEO local",
-      "votre partenaire digital"
+      " – créateur de sites performants",
+      " – expert en SEO local",
+      " – votre allié digital"
     ];
 
     const el = document.querySelector(".typing");
