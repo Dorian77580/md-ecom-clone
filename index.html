@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-   <!-- 🔑 Titre SEO -->
+
+  <!-- 🔑 Titre SEO -->
   <title>Création de site web en Seine-et-Marne | MD ECOM</title>
 
   <!-- 📝 Meta Description -->
@@ -21,7 +21,6 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://tonpseudo.github.io">
 
-  <title>MD ECOM – Agence Web</title>
   <style>
     body {
       margin: 0;
@@ -70,12 +69,33 @@
       font-size: 0.9rem;
       color: #999;
     }
+
+    .typing {
+      font-size: 2rem;
+      font-weight: bold;
+      border-right: 2px solid #FFCC00;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      animation: typing 4s steps(40, end) forwards, blink 0.8s step-end infinite;
+      margin-top: 20px;
+      display: inline-block;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>MD ECOM</h1>
+    <h1>MD ECOM <span class="typing"></span></h1>
     <p>Création de sites web sur-mesure, SEO local et optimisation de votre présence en ligne</p>
     <a href="https://mdecom.fr/contact/" class="cta-button">Demander un audit gratuit</a>
   </header>
@@ -83,6 +103,43 @@
   <footer>
     © 2025 MD ECOM — Tous droits réservés
   </footer>
+
+  <script>
+    const phrases = [
+      "créateur de sites puissants",
+      "expert en SEO local",
+      "votre partenaire digital"
+    ];
+
+    const el = document.querySelector(".typing");
+    let phraseIndex = 0;
+    let charIndex = 0;
+
+    function type() {
+      if (charIndex < phrases[phraseIndex].length) {
+        el.textContent += phrases[phraseIndex].charAt(charIndex);
+        charIndex++;
+        setTimeout(type, 70);
+      } else {
+        setTimeout(erase, 2000);
+      }
+    }
+
+    function erase() {
+      if (charIndex > 0) {
+        el.textContent = phrases[phraseIndex].substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(erase, 40);
+      } else {
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        setTimeout(type, 300);
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      type();
+    });
+  </script>
 
 </body>
 </html>
